@@ -1,0 +1,14 @@
+{
+  "appId": "com.template_webpacked_capacitor.app",
+  "appName": "template_webpacked_capacitor",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "dist",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  },
+  "cordova": {},
+  "linuxAndroidStudioPath": "/home/carlos/android-studio/bin/studio.sh"
+}
