@@ -49,6 +49,12 @@ import 'chardin.ts/chardinjs.scss';
     body.innerHTML += `
     <div id="root"></div><button id='notification-button'>btn</button>
     <div style="background:pink;   margin: auto; min-width:400px; width: 50%; border: 3px solid green; padding: 10px;">
+	<style>
+	label{
+	  padding:10px
+	}
+	</style>
+    <div style="  width:350px; margin: auto; ">
 		<h1> Midi Programmer </h1>
 		<details>
 			<summary><b>Description:</b></summary>
@@ -66,23 +72,66 @@ import 'chardin.ts/chardinjs.scss';
 			</ul>
 		</details>
 		<br>
-
-		<b>Instructions:</b>
-		<ol>
-		<li>Plug in your device via usb and press the button down on the button you want to reprogram.</li>
-		<li>The form below will auto-complete with the current midi message being sent from your device.</li> 
-		<li>Overwrite what gets sent by the device by editing the aforementioned form and hitting submit.</li>
-		</ol>
-		<br> <br>
-
-		<label for="ch"><b>Midi Channel</b> (between 1 and 16):</label> <input type="number" id="ch" name="ch" min="1" max="16">  <br>
-		<label for="cc"><b>CC Number</b> (between 0 and 127):</label> <input type="number" id="cc" name="cc" min="0" max="127"> <br>
-		<b>Type</b>: <br>
-		<input type="radio" id="tr" name="ty" value="1"> <label for="tr">Trigger</label><br>
-		<input type="radio" id="to" name="ty" value="2"> <label for="to">Toggle</label><br>
-		<input type="radio" id="mo" name="ty" value="3"> <label for="mo">Momentary</label><br>
+<table>
+  <tr>
+    <th><b> Midi Channel</b>  </th>
+    <th><label for="ch"><b>Channel</b> <br>(1-16)</label></th>
+    <th><label for="cc"><b>CC Number</b> <br>(0-127)</label></th>
+    <th><label for="type">Type:</label></th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td><input type="number" id="ch1" name="ch" min="1" max="16"></td>
+    <td><input type="number" id="cc1" name="cc" min="0" max="127"></td>
+    <td>
+		<select name="type" id="type1">
+		  <option value="1"><b>Trigger</b></option>
+		  <option value="2"><b>Toggle</b></option>
+		  <option value="3"><b>Momentary</b></option> 
+		</select>
+    </td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td><input type="number" id="ch2" name="ch" min="1" max="16"></td>
+    <td><input type="number" id="cc2" name="cc" min="0" max="127"></td>
+    <td>
+		<select name="type" id="type2">
+		  <option value="1"><b>Trigger</b></option>
+		  <option value="2"><b>Toggle</b></option>
+		  <option value="3"><b>Momentary</b></option> 
+		</select>
+    </td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td><input type="number" id="ch3" name="ch" min="1" max="16"></td>
+    <td><input type="number" id="cc3" name="cc" min="0" max="127"></td>
+    <td>
+		<select name="type" id="type3">
+		  <option value="1"><b>Trigger</b></option>
+		  <option value="2"><b>Toggle</b></option>
+		  <option value="3"><b>Momentary</b></option> 
+		</select>
+    </td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td><input type="number" id="ch4" name="ch" min="1" max="16"></td>
+    <td><input type="number" id="cc4" name="cc" min="0" max="127"></td>
+    <td>
+		<select name="type" id="type4">
+		  <option value="1"><b>Trigger</b></option>
+		  <option value="2"><b>Toggle</b></option>
+		  <option value="3"><b>Momentary</b></option> 
+		</select>
+    </td>
+  </tr>
+</table>
+		<br>
 
 		<input type="submit">
+	</div>
 	</div>
     `
     window.globalvariable = [];
